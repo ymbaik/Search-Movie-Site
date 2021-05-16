@@ -1,0 +1,18 @@
+>npx degit ParkYoungWoong/vue3-webpack-template#eslint .
+>npm i
+>code . -r
+구글검색 vue-router-next
+https://next.router.vuejs.org/
+
+>npm install vue-router@4
+code 작성후
+>npm run dev
+
+>npm i bootstrap@next
+
+//새프로젝트 시작
+VScode로 폴더 열기
+
+index.html에서 Open with Live Server를 열어서 실행결과 확인할 것
+
+
