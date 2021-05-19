@@ -1,28 +1,30 @@
 import axios from 'axios'
 import _uniqBy from 'lodash/uniqBy'
 
+const _defaultMessage = 'Search for the movie title!'  //_ 언더바는 이 파일에서만 사용한다는 의미임
+
 export default {
   //module!
   namespaced: true,
   //data!
   state: () => ({
     movies: [],
-    message: 'Search for the movie title!',
+    message: _defaultMessage,
     loading: false,
     theMovie: {}
   }),
-  //computed
   getters: {},
-  //변이 methods!
-  mutations: {
+  mutations: {   //변이 methods!
     updateState(state, payload) {
       //['movies','message'.'loading']
       Object.keys(payload).forEach(key => {
         state[key] = payload[key]
       })
     },
-    resetMovies(state) {
+    resetMovies(state) {  //메임페이지 초기화  routㄷ/Home.vue에 등록해서 실행시킨다
       state.movies = []
+      state.message = _defaultMessage
+      state.loading = false
     }
   },
   // actions는 async, await 안붙여도 기본적으로 비동기로 처리됨

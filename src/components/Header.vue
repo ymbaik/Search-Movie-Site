@@ -26,6 +26,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import Logo from '~/components/Logo'
 
 export default {
@@ -52,13 +53,12 @@ export default {
     }
   },
   computed: {
-    image() {
-      return this.$store.state.about.image
-    },
-    name() {
-      return this.$store.state.about.name
-    }
+    ...mapState('about', [  
+      'image',
+      'name',
+    ])
   },
+  //계산된 데이터들은 methods에서 this.name this.image 로 접근해서 사용할 수 있다
   methods: {
     isMatch(path) {
       if (!path) return false
@@ -74,8 +74,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
-
 header {
   height: 70px;
   padding: 0 40px;

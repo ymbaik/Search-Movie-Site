@@ -76,6 +76,8 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
+
 import Loader from '~/components/Loader'
 
 export default {
@@ -88,29 +90,28 @@ export default {
     }
   },
   computed: {
-    theMovie() {
-      return this.$store.state.movie.theMovie
-    },
-    loading() {
-      return this.$store.state.movie.loading
-    }
+    ...mapState('movie', [
+      'theMovie',
+      'loading',
+    ])
   },
   created() {
-    console.log(this.$route)
     this.$store.dispatch('movie/searchMovieWithId', {
-      // movie/영화고유아이디
+      //movie/tt123762
       id: this.$route.params.id
     })
   },
   methods: {
     requestDiffSizeImage(url, size = 700) {
+      // 잘못된 URL(Poster)인 경우.
       if (!url || url === 'N/A') {
         this.imageLoading = false
         return ''
       }
       const src = url.replace('SX300', `SX${size}`)
+      // 정상적인 URL인 경우.
       this.$loadImage(src)
-        .then( () => {
+        .then(() => {
           this.imageLoading = false
         })
       return src
@@ -120,8 +121,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
-
 .container {
   padding-top: 40px;
 }
@@ -230,7 +229,7 @@ export default {
   @include media-breakpoint-down(lg) {
     display: block;
     .poster {
-      margin-bottom: 50x;
+      margin-bottom: 40x;
     }
   }
   @include media-breakpoint-down(md) {

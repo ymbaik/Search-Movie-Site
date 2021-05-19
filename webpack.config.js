@@ -37,11 +37,16 @@ module.exports = {
         test: /\.s?css$/,
         use: [
           // 순서 중요!
-          'vue-style-loader',
+          'vue-style-loader',  //가장 나중에 실행
           'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
+          {
+            loader: 'sass-loader',   //가장 먼저 실행
+            options: {
+              additionalData: '@import "~/scss/main";' //모든 파일에 적용됨
+            }
+          }     
         ]
       },
       {
@@ -74,7 +79,7 @@ module.exports = {
   // 개발 서버 옵션
   devServer: {
     host: 'localhost',
-    port: 8080,
+    port: 8079,
     hot: true
   }
 }

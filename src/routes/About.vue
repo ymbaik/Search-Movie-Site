@@ -30,7 +30,9 @@ export default {
     }
   },
   computed: {
-    ...mapState('about', [
+    //about이라는 모듈안에 상태들을 배열형태로 정의하면
+    //상태연산자 ...가 computed에 등록해준다
+    ...mapState('about', [  
       'name',
       'email',
       'blog',
@@ -51,8 +53,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "~/scss/main";
-
 .about {
   text-align: center;
   .photo {
