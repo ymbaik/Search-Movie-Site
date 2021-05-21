@@ -1,3 +1,23 @@
+# sample netlify.toml
+# https://cli.netlify.com/netlify-dev
+
+# 제품 모드
 [build]
-  functions = "functions"
+  command = "npm run build"
+  functions = "functions" # Netnify 서버리스 함수가 작성한 디렉토리를 지정한다
+  publish = "dist"
+
+# 개발 모드
+[dev]
+  framework = "#custom" # 감지할 프로젝트 유형을 지정한다.
+  command = "npm run dev" # Command to start your dev server
+  targetPort = 8080 # The port for your application server, framework or site generator
+  port = 8888 # The port that the netlify dev will be accessible on
+  publish = "dist" # The path to your static content folder
+  autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
+  # to start an https server instead of an http one, configure a certificate and key files
+
+  # [dev.https]
+  #   certFile = "cert.pem" # path to the certificate file
+  #   keyFile = "key.pem" # path to the private key file
   
