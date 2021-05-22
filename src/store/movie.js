@@ -69,7 +69,7 @@ export default {
           })
         }
       }
-     } catch (message) {
+     } catch ({ message }) {  //에러 객체를 반환 받아서 안에 들어있는 데이터를 사용
        commit('updateState', {
          movies: [],
          message: message
@@ -107,23 +107,11 @@ export default {
   }
 }
 // 실제 영화에 관련된 데이터 가져오는 함수 _fetchMovie
-function _fetchMovie(payload) {
-  const { title, type, year, page, id } = payload
-  const OMDB_API_KEY = '7035c60c'
-  const url = id   //삼항연산자 조건 참 : 거짓
-    ? `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=${id}` 
-    : `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=${title}&type=${type}&y=${year}&page=${page}`
-
-  return new Promise( (resolve, reject) => {
-    axios.get(url)
-      .then( (res) => {
-        if (res.data.Error) {
-          reject(res.data.Error)
-        }
-        resolve(res)
-      })
-      .catch( (err) => {
-        reject(err.message)
-      }) 
-  })
+//netlify 서버리스 서버에 요청할 payload 데이터 같이 보낸다
+//payload에는 여러가지 영화정보들 속성을 가지고 있는 객체데이터이다. 
+//요청형태로 payload를 보내면 functions의 movie.js에서 event 객체로 받아서 사용
+//get은 url상에 query string(?title=value&page=value)으로 데이터 전송
+//post는 데이터를 body에 담아서 전송
+async function _fetchMovie(payload) {
+  return await axios.post('/.netlify/functions/movie', payload) 
 }

@@ -1,4 +1,4 @@
-exports.handler = async function (event, context) {
+exports.handler = async function (event) {
   return {
     statusCode: 200,
     // body: 'Hello World!'  //문자데이터만 할당가능

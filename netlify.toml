@@ -10,9 +10,9 @@
 # 개발 모드
 [dev]
   framework = "#custom" # 감지할 프로젝트 유형을 지정한다.
-  command = "npm run dev" # Command to start your dev server
-  targetPort = 8080 # The port for your application server, framework or site generator
-  port = 8888 # The port that the netlify dev will be accessible on
+  command = "npm run dev:webpack" # Command to start your dev server
+  targetPort = 8079 # The port for your application server, framework or site generator
+  port = 8080 # The port that the netlify dev will be accessible on
   publish = "dist" # The path to your static content folder
   autoLaunch = true # a Boolean value that determines if Netlify Dev launches the local server address in your browser
   # to start an https server instead of an http one, configure a certificate and key files
