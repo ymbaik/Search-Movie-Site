@@ -1,8 +1,9 @@
 module.exports = {
-  // 사전에 정의된 전역 변수 설정
+  // 사전에 정의된 전역 변수 설정 eslint 에러 발생시에 설정해줌
   env: {
     browser: true,
-    node: true
+    node: true,
+    jest: true
   },
   // 사용 가능한 규칙 세트
   extends: [
