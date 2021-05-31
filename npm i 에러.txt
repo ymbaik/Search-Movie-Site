@@ -1,0 +1,40 @@
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: find-up@3.0.0 (node_modules\netlify-cli\node_modules\pkg-conf\node_modules\find-up):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename 
+'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pkg-conf\node_modules\find-up\package.json.1703247817' -> 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pkg-conf\node_modules\find-up\package.json'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: p-locate@3.0.0 (node_modules\netlify-cli\node_modules\pkg-conf\node_modules\p-locate):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, chmod 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pkg-conf\node_modules\p-locate\package.json.3893279858'
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: locate-path@3.0.0 (node_modules\netlify-cli\node_modules\pkg-conf\node_modules\locate-path):
+npm WARN enoent SKIPPING OPTIONAL DEPENDENCY: ENOENT: no such file or directory, rename 
+'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pkg-conf\node_modules\locate-path\package.json.3276733370' -> 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pkg-conf\node_modules\locate-path\package.json'
+
+npm ERR! code EPERM
+npm ERR! syscall rename
+npm ERR! path C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json.287470773       
+npm ERR! dest C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json
+npm ERR! errno -4048
+npm ERR! Error: EPERM: operation not permitted, rename 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json.287470773' -> 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json'
+npm ERR!  [OperationalError: EPERM: operation not permitted, rename 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json.287470773' -> 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json'] {
+npm ERR!   cause: [Error: EPERM: operation not permitted, rename 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json.287470773' -> 'C:\Users\ymbaik\Videos\Captures\frontend-superclass-online\practice\Ch4-Search-Movie-Site\node_modules\netlify-cli\node_modules\pupa\package.json'] {
+npm ERR!     errno: -4048,
+npm ERR!     code: 'EPERM',
+npm ERR!     syscall: 'rename',
+npm ERR!     path: 'C:\\Users\\ymbaik\\Videos\\Captures\\frontend-superclass-online\\practice\\Ch4-Search-Movie-Site\\node_modules\\netlify-cli\\node_modules\\pupa\\package.json.287470773',
+npm ERR!     dest: 'C:\\Users\\ymbaik\\Videos\\Captures\\frontend-superclass-online\\practice\\Ch4-Search-Movie-Site\\node_modules\\netlify-cli\\node_modules\\pupa\\package.json'
+npm ERR!   },
+npm ERR!   errno: -4048,
+npm ERR!   code: 'EPERM',
+npm ERR!   syscall: 'rename',
+npm ERR!   path: 'C:\\Users\\ymbaik\\Videos\\Captures\\frontend-superclass-online\\practice\\Ch4-Search-Movie-Site\\node_modules\\netlify-cli\\node_modules\\pupa\\package.json.287470773',
+npm ERR!   dest: 'C:\\Users\\ymbaik\\Videos\\Captures\\frontend-superclass-online\\practice\\Ch4-Search-Movie-Site\\node_modules\\netlify-cli\\node_modules\\pupa\\package.json',
+npm ERR!   parent: 'netlify-cli'
+npm ERR! }
+npm ERR!
+npm ERR! The operation was rejected by your operating system.
+npm ERR! It's possible that the file was already in use (by a text editor or antivirus),npm ERR! or that you lack permissions to access it.
+npm ERR!
+npm ERR! If you believe this might be a permissions issue, please double-check the      
+npm ERR! permissions of the file and its containing directories, or try running
+npm ERR! the command again as root/Administrator.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     C:\Users\ymbaik\AppData\Roaming\npm-cache\_logs\2021-05-29T16_06_31_899Z-debug.log

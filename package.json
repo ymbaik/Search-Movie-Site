@@ -13,7 +13,8 @@
     "build": "webpack --mode production",
     "lint": "eslint --fix --ext .js,.vue",
     "test:unit": "jest --watchAll",
-    "test:e2e": "cypress open"
+    "test:e2e": "cypress open",
+    "dev:test": "netlify help"
   },
   "keywords": [],
   "author": "",
@@ -39,7 +40,7 @@
     "html-webpack-plugin": "^5.3.1",
     "jest": "^26.6.3",
     "jest-transform-stub": "^2.0.0",
-    "netlify-cli": "^3.31.14",
+    "netlify-cli": "^3.17.0",
     "postcss": "^8.2.15",
     "postcss-loader": "^5.2.0",
     "sass": "^1.32.8",
